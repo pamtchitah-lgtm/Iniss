@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>INISS</title>
+  <link rel="stylesheet" href="iniss.css" type="text/css">
+  <script src="iniss.js" defer></script>
+</head>
+
+<body>
+  <h1>INISS</h1>
+  <div class="main-container">
+    <div class="tab-header">
+      <button class="tab-link tab-trigger active" onclick="switchTab(event, 'accueil')">Accueil</button>
+      <button class="tab-link tab-trigger" onclick="switchTab(event, 'membres')">Les membres</button>
+      <button class="tab-link tab-trigger" onclick="switchTab(event, 'contacts')">Contacts</button>
+      <button class="tab-link tab-trigger" onclick="switchTab(event, 'extraits')">Extraits</button>
+    </div>
+    
+    <div id="accueil" class="tab-pane active">
+      <h2>Présentation du groupe</h2>
+      <p>INISS est un groupe de <em>musique traditionnelle</em>.</p>
+      <center><img src="Images/instruments.jpg" alt="Une image de test" height="533" width="400" align="middle"/></center>
+    </div>
+    
+    <div id="membres" class="tab-pane">
+      <h2>Composition du groupe</h2>
+      <ul>
+        <li>Valérie</li>
+        <li>Didier</li>
+        <li>Paul</li>
+        <li>Jean-Paul</li>
+        <li>Damien</li>
+      </ul>
+    </div>
+    
+    <div id="contacts" class="tab-pane">
+      <h2>Adresses électroniques</h2>
+      <adress>
+        <a href="mailto:ceciestuntest@gmail.fr">ceciestuntest@gmail.fr</a><br />
+        <a href="mailto:voiciunautretest@hotmail.fr">voiciunautretest@hotmail.fr</a><br />
+      </adress>
+      
+      <h2>Téléphones</h2>
+      <address>
+        <a href="tel:00 01 02 03 04">00 01 02 03 04</a><br />
+        <a href="tel:06 06 06 06 06">06 06 06 06 06</a>
+      </adress>
+    </div>
+    
+    <div id="extraits" class="tab-pane">
+      <h2>Festibal d'Ornacieux (12/09/2026)</h2>
+      <h3>Andro</h3>
+      <div class='audio-container'>
+        <audio controls>
+          <source src="Musiques/extrait1_andro.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      
+      <h3>Chapelloise</h3>
+      <div class='audio-container'>
+        <audio controls>
+          <source src="Musiques/extrait2_chapelloise.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      
+      <h3>Zelda</h3>
+      <div class='audio-container'>
+        <audio controls>
+          <source src="Musiques/extrait3_zelda.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </div>
+</body>  
+</html>
+
+
+<!--
+<body>
+    
+  <div id="tabs">
+  <ul>
+      <li><a href="#presentation_groupe" rel="url1">Présentation du groupe</a></li>
+      <li><a href="#membres" rel="url2">Les membres</a></li>
+      <li><a href="#contacts" rel="url3">Contacts</a></li>
+      <li><a href="#extraits" rel="url4">Extraits</a></li>
+  </ul>
+  </div>
+  
+  <div class="items">
+  
+    <p id="presentation_groupe">
+    INISS est un groupe de <em>musique traditionnelle</em> dont le répertoire se concentre autour du folk de centre France avec quelques escapades du côté de la Bretagne et de l'Est européen.
+    </p>
+    <center>
+    <img src="instruments.jpg" alt="Une image de test" height="533" width="400" align="middle"/>
+    </center>
+    
+    <ul id="membres">
+      <li>Valérie</li>
+      <li>Didier</li>
+      <li>Paul</li>
+      <li>Jean-Paul</li>
+      <li>Damien</li>
+    </ul>
+    
+    <ul id="contacts">
+      <li>ddinapoli@free.fr</li>
+      <li>agnesvalnath@hotmail.fr</li>
+    </ul>
+    
+</body>
+-->
