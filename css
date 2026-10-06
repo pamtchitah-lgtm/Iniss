@@ -1,0 +1,145 @@
+<style>
+  /* --- DESIGN GLOBAL --- */
+  :root {
+    --primary-color: #2563eb;
+    --bg-color: #f8fafc;
+    --text-color: #1e293b;
+    --border-color: #e2e8f0;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: black;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px; /* Réduit pour mobile */
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    color: green;
+    text-align: center;
+    font-family: Snell Roundhand, cursive;
+  }
+  
+  .audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #0f0f0f;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+  }
+  
+  /* --- BARRE DE NAVIGATION RESPONSIVE --- */
+  .tab-header {
+    display: flex;
+    background-color: none;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap; /* Permet le passage à la ligne */
+  }        
+  
+  .tab-trigger {
+    flex: 1;
+    min-width: 120px; /* Empêche les boutons d'être trop étroits */
+    padding: 18px 15px;
+    border: none;
+    background: #d1b6b6;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+    text-align: center;
+  }
+  
+  .tab-trigger:hover {
+    background-color: #e2e8f0;
+    color: var(--primary-color);
+  }
+  
+  .tab-trigger.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    background-color: white;
+  }
+  
+  /* --- CONTENU --- */
+  .tab-pane {
+    display: none;
+    padding: 30px; /* Un peu réduit pour mobile */
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  .tab-pane.active {
+    display: block;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .tab-pane h2 {
+    margin-top: 0;
+    color: green;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: Didot, serif;
+  }
+  
+  .tab-pane h3 {
+    margin-top: 0;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: URW Chancery L, cursive;
+  }
+  
+  .tab-pane p {
+    color: white;
+  }
+  
+  .tab-pane ul li {
+    color: white;
+  }
+  
+  .tab-pane a {
+    color: #343CF7;
+  }
+  
+  /* --- MEDIA QUERIES (MOBILE) --- */
+  @media (max-width: 600px) {
+    .tab-header {
+      flex-direction: column; /* Aligne les boutons verticalement */
+    }
+    
+    .tab-trigger {
+      width: 100%;
+      text-align: left; /* Texte à gauche pour une liste mobile */
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--border-color);
+      border-left: 4px solid transparent; /* Change l'indicateur de côté */
+    }
+    
+    .tab-trigger.active {
+      border-bottom: 1px solid var(--border-color);
+      border-left: 4px solid var(--primary-color);
+      background-color: #f8fafc;
+    }
+    
+    .tab-pane {
+      padding: 20px;
+    }
+  }
+</style>
